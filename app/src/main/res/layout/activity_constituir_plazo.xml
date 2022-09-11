@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ConstituirPlazo"
+    android:id="@+id/layoutConstituirGeneral"
+    >
+
+    <!--Este es el linear layout principal -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="15dp">
+
+        <include layout="@layout/mi_toolbar"
+            android:id="@+id/miToolbar"></include>
+
+        <include layout="@layout/imagen_titulo"
+            android:id="@+id/imagenTitulo"></include>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTexto"
+            android:text="Para constituir tu plazo fijo necesitamos\n
+        que nos proveas algunos datos."
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:layout_margin="5dp"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtNombre"
+                android:text="Nombre"
+                android:layout_marginEnd="10dp"></TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editNombre"
+                android:hint="Ingrese su nombre"></EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtApellido"
+                android:text="Apellido"
+                android:layout_marginEnd="10dp"></TextView>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editApellido"
+                android:hint="Ingrese su apellido"></EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtMoneda"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Moneda"
+                android:layout_marginEnd="10dp"
+                android:layout_gravity="center"></TextView>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spMoneda"></Spinner>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/botonSimular"
+            android:text="SIMULAR"></Button>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></TextView>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/botonConstituir"
+            android:text="CONSTITUIR"></Button>
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

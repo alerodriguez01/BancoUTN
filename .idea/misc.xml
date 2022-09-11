@@ -5,7 +5,10 @@
       <map>
         <entry key="..\:/Users/rodri/AndroidStudioProjects/BancoUTN/app/src/main/res/drawable/utn_logo.xml" value="0.178" />
         <entry key="..\:/Users/rodri/AndroidStudioProjects/BancoUTN/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/rodri/AndroidStudioProjects/BancoUTN/app/src/main/res/layout/activity_simular_plazo.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/rodri/AndroidStudioProjects/BancoUTN/app/src/main/res/layout/boton_titulo.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/rodri/AndroidStudioProjects/BancoUTN/app/src/main/res/layout/imagen_titulo.xml" value="0.2" />
+        <entry key="..\:/Users/rodri/AndroidStudioProjects/BancoUTN/app/src/main/res/layout/mi_toolbar.xml" value="0.22826086956521738" />
       </map>
     </option>
   </component>
