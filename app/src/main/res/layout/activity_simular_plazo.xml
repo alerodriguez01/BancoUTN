@@ -12,76 +12,85 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_margin="15dp">
+        android:orientation="vertical">
 
         <include layout="@layout/mi_toolbar"
-            android:id="@+id/miToolbar"></include>
+            android:id="@+id/miToolbar"/>
 
         <include layout="@layout/imagen_titulo"
-            android:id="@+id/imagenTitulo"></include>
+            android:id="@+id/imagenTitulo"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginEnd="@dimen/normal_margin">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/txtTNA"
-                android:text="Tasa Nominal Anual"
-                android:layout_marginEnd="10dp"></TextView>
+                android:text="@string/tasa_nominal_anual"
+                android:textAppearance="?attr/textAppearanceBody2"/>
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/editTNA"
                 android:inputType="numberDecimal"
-                android:hint="Ingrese la TNA"></EditText>
+                android:layout_marginStart="@dimen/normal_margin"
+                android:hint="@string/ingrese_tna"/>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginEnd="@dimen/normal_margin"
+            android:layout_marginTop="@dimen/normal_margin">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/txtTEA"
-                android:text="Tasa Efectiva Anual"
-                android:layout_marginEnd="10dp"></TextView>
+                android:text="@string/tasa_efectiva_anual"
+                android:textAppearance="?attr/textAppearanceBody2"/>
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/editTEA"
                 android:inputType="numberDecimal"
-                android:hint="Ingrese la TEA"></EditText>
+                android:layout_marginStart="@dimen/normal_margin"
+                android:hint="@string/ingrese_tea"/>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/normal_margin"
+            android:layout_marginEnd="@dimen/normal_margin"
+            android:layout_marginTop="@dimen/normal_margin">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/txtCapital"
-                android:text="Capital a Invertir ($)"
-                android:layout_marginEnd="10dp"></TextView>
+                android:text="@string/capital_a_invertir"
+                android:textAppearance="?attr/textAppearanceBody2"/>
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/editCapital"
                 android:inputType="numberDecimal"
-
-                android:hint="Ingrese el capital a invertir"></EditText>
+                android:layout_marginStart="@dimen/normal_margin"
+                android:hint="@string/ingrese_capital"/>
 
         </LinearLayout>
 
@@ -89,140 +98,205 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/seekDias"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:min="0"
+            android:layout_marginTop="@dimen/normal_margin"
             android:max="12"
-            android:progress="1"></SeekBar>
+            android:progress="1"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/txtDiasSeek"
-            android:text="30 días"
-            android:layout_marginLeft="15dp"></TextView>
+            android:text="@string/dias"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginStart="@dimen/long_margin"
+            android:textAppearance="?attr/textAppearanceSubtitle2"
+            android:textColor="?attr/colorOnSecondary"/>
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/checkRenovacion"
-            android:text="Con renovación automática"></CheckBox>
+            android:layout_margin="@dimen/normal_margin"
+            android:text="@string/renovacion"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtSimulador"
+                android:text="@string/simulador_plazo"
+                android:textAlignment="center"
+                android:textAppearance="?attr/textAppearanceHeadline6" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/normal_margin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:text="@string/plazo"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtDiasSimulador"
+                        android:textAppearance="?attr/textAppearanceSubtitle2"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:layout_marginStart="@dimen/long_margin"
+                        android:text="30 días"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/capitalTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:text="@string/capital"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtCapitalSimulador"
+                        android:layout_marginStart="@dimen/normal_margin"
+                        android:textAppearance="?attr/textAppearanceSubtitle2"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:text="$ 0"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/interesesTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:text="@string/intereses_ganados"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtInteresesGanados"
+                        android:layout_marginStart="@dimen/normal_margin"
+                        android:textAppearance="?attr/textAppearanceSubtitle2"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:text="$ 0"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/montoTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:text="@string/monto_total"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtMontoTotal"
+                        android:layout_marginStart="@dimen/normal_margin"
+                        android:textAppearance="?attr/textAppearanceSubtitle2"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:text="$ 0"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/montoAnualTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        android:text="@string/monto_total_anual"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtMontoTotalAnual"
+                        android:layout_marginStart="@dimen/normal_margin"
+                        android:textAppearance="?attr/textAppearanceSubtitle2"
+                        android:textColor="?attr/colorOnSecondary"
+                        android:text="$ 0"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/txtSimulador"
-            android:text="Simulador Plazo Fijo en Pesos"
-            android:textAlignment="center"
-            android:textStyle="bold"
-            android:layout_marginTop="15dp"></TextView>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="Plazo: "></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtDiasSimulador"
-                android:text="30 días"></TextView>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="Capital: $"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtCapitalSimulador"
-                android:text="0"></TextView>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="Intereses ganados: $"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtInteresesGanados"
-                android:text="0"></TextView>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="Monto total: $"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtMontoTotal"
-                android:text="0"></TextView>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:text="Monto total anual: $"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtMontoTotalAnual"
-                android:text="0"></TextView>
-
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"></TextView>
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/normal_margin"
             android:id="@+id/botonConfirmar"
-            android:text="CONFIRMAR"></Button>
+            android:text="@string/confirmar"/>
 
 
     </LinearLayout>

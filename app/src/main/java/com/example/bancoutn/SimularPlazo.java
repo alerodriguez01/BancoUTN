@@ -48,6 +48,7 @@ public class SimularPlazo extends AppCompatActivity {
         //Boton CONFIRMAR
         btnConfirmar = binding.botonConfirmar;
         btnConfirmar.setEnabled(false);
+        
         btnConfirmar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,28 +76,35 @@ public class SimularPlazo extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /*  La tasa nominal anual es una ganancia que se calcula sobre el monto invertido inicial,
+        mientras que la tasa efectiva suma las ganancias mensuales al monto inicial, haciendo que
+        los ingresos sean mayores pues se calculan sobre un capital mayor.
+        La relacion entre tasa anual y efectiva esta dada por:
+        TEA = (1 + TNA/100*12)**MESES
+     */
     private void manejarInformacion(){
 
         //TextsViews de informacion
-        plazo_sim = binding.txtDiasSimulador; // x dias
-        capital_sim = binding.txtCapitalSimulador; // capital
-        intereses_sim = binding.txtInteresesGanados; // intereses ganados
-        monto_sim = binding.txtMontoTotal; // monto total
-        monto_anual_sim = binding.txtMontoTotalAnual; //monto total anual
+        plazo_sim = binding.txtDiasSimulador;           // x dias
+        capital_sim = binding.txtCapitalSimulador;      // capital
+        intereses_sim = binding.txtInteresesGanados;    // intereses ganados
+        monto_sim = binding.txtMontoTotal;              // monto total
+        monto_anual_sim = binding.txtMontoTotalAnual;   //monto total anual
 
-        dias_seek = binding.txtDiasSeek; // texto debajo de la seek
+        dias_seek = binding.txtDiasSeek;                // texto debajo de la seek
 
-        //EditText de la tasa nominal anual
+                                                        //EditText de la tasa nominal anual
         tna_user = binding.editTNA;
-        //EditText de la tasa efectiva anual
+                                                        //EditText de la tasa efectiva anual
         tea_user = binding.editTEA;
-        //EditText del capital a invertir
+                                                        //EditText del capital a invertir
         capital_user = binding.editCapital;
-        //SeekBar de los dias
+                                                        //SeekBar de los dias
         seekDias = binding.seekDias;
 
         tna_user.getText();
         //EditText de la tasa nominal anual
+
         tna_user.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {

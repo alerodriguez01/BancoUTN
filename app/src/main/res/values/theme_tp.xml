@@ -4,6 +4,7 @@
 
         <item name="colorPrimary">@color/botones</item>
         <item name="android:statusBarColor">@color/purple_700</item>
+        <item name="colorOnSecondary">@color/subtle_white</item>
 
     </style>
 </resources>
