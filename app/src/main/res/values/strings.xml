@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">BancoUTN</string>
+
     <string name="constPlazo">Para constituir tu plazo fijo necesitamos que nos proveas algunos datos.</string>
     <string name="banco_utn">Banco UTN</string>
     <string name="santafe">Provincia de Santa Fe</string>
@@ -25,4 +26,9 @@
     <string name="monto_total">Monto total:</string>
     <string name="monto_total_anual">Monto total anual:</string>
     <string name="confirmar">CONFIRMAR</string>
+
+    <!-- Nombres de fragmentos y activities -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="simular_plazo">Simular plazo</string>
+    <string name="const_plazo">Constituir plazo</string>
 </resources>

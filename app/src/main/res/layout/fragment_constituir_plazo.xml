@@ -8,7 +8,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ConstituirPlazo"
+    tools:context=".ConstituirPlazoFragment"
     >
 
     <!--Este es el linear layout principal -->
@@ -16,10 +16,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
-        <include
-            android:id="@+id/miToolbar"
-            layout="@layout/mi_toolbar" />
 
         <include
             android:id="@+id/imagenTitulo"
@@ -44,7 +40,8 @@
                 android:id="@+id/editNombre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/ingresar_nombre" />
+                android:hint="@string/ingresar_nombre"
+                android:singleLine="true"/>
 
         </LinearLayout>
 
@@ -58,7 +55,8 @@
                 android:id="@+id/editApellido"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/ingresar_apellido" />
+                android:hint="@string/ingresar_apellido"
+                android:singleLine="true"/>
 
         </LinearLayout>
 
@@ -78,7 +76,8 @@
             <Spinner
                 android:id="@+id/spMoneda"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:entries="@array/spinnerItems"/>
 
         </LinearLayout>
 
@@ -87,6 +86,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
+            android:enabled="false"
             android:layout_marginEnd="@dimen/normal_margin"
             android:text="@string/simular" />
 
@@ -102,6 +102,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:enabled="false"
             android:layout_margin="@dimen/normal_margin"
             android:text="@string/constituir" />
 

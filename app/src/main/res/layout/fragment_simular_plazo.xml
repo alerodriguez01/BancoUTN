@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SimularPlazo"
+    tools:context=".SimularPlazoFragment"
     android:id="@+id/layoutSimularGeneral">
 
     <!--Este es el linear layout principal -->
@@ -13,9 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
-        <include layout="@layout/mi_toolbar"
-            android:id="@+id/miToolbar"/>
 
         <include layout="@layout/imagen_titulo"
             android:id="@+id/imagenTitulo"/>
@@ -296,6 +293,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/normal_margin"
             android:id="@+id/botonConfirmar"
+            android:enabled="false"
             android:text="@string/confirmar"/>
 
 
