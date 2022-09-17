@@ -11,4 +11,11 @@ public class ConstituirPlazoViewModel extends ViewModel {
     public String capital;
     public int dias;
 
+    public ConstituirPlazoViewModel(){
+        nombre = null;
+        apellido = null;
+        capital = null;
+        dias = -1;
+    }
+
 }

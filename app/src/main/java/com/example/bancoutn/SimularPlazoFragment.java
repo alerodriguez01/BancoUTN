@@ -19,12 +19,14 @@ import android.widget.SeekBar;
 
 import com.example.bancoutn.databinding.FragmentSimularPlazoBinding;
 import com.example.bancoutn.utilities.Utilities;
+import com.example.bancoutn.viewmodels.ConstituirPlazoViewModel;
 import com.example.bancoutn.viewmodels.SimularPlazoViewModel;
 
 public class SimularPlazoFragment extends Fragment {
 
     private FragmentSimularPlazoBinding binding;
     private SimularPlazoViewModel viewModel;
+    private ConstituirPlazoViewModel viewModel2;
 
     private EditText tna_user, tea_user, capital_user;
     private SeekBar seekDias;
@@ -47,6 +49,7 @@ public class SimularPlazoFragment extends Fragment {
         seekDias = binding.seekDias;
 
         viewModel = new ViewModelProvider(getActivity()).get(SimularPlazoViewModel.class);
+        viewModel2 = new ViewModelProvider(getActivity()).get(ConstituirPlazoViewModel.class);
 
         tna_user.addTextChangedListener(new TextWatcher()
         {
@@ -145,9 +148,14 @@ public class SimularPlazoFragment extends Fragment {
             @Override
             public void onClick(View v)
             {
+                /*
                 NavDirections action = SimularPlazoFragmentDirections.actionSimularPlazoFragmentToConstituirPlazoFragment()
                         .setCapital(binding.editCapital.getText().toString())
                         .setDias(binding.seekDias.getProgress()*30);
+                */
+                viewModel2.capital = binding.editCapital.getText().toString();
+                viewModel2.dias = binding.seekDias.getProgress()*30;
+                NavDirections action = SimularPlazoFragmentDirections.actionSimularPlazoFragmentToConstituirPlazoFragment();
                 Navigation.findNavController(v).navigate(action);
             }
         });

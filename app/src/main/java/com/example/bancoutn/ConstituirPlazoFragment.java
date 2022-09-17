@@ -38,11 +38,23 @@ public class ConstituirPlazoFragment extends Fragment {
 
         viewModel = new ViewModelProvider(getActivity()).get(ConstituirPlazoViewModel.class);
 
+        /*
         String capital = ConstituirPlazoFragmentArgs.fromBundle(getArguments()).getCapital();
         int dias = ConstituirPlazoFragmentArgs.fromBundle(getArguments()).getDias();
+         */
+        String capital = viewModel.capital;
+        int dias = viewModel.dias;
 
         if(!Objects.equals(capital, "null") && dias > -1) binding.botonConstituir.setEnabled(true);
 
+        String nombre = viewModel.nombre;
+        String apellido = viewModel.apellido;
+
+        if(!Objects.equals(nombre, null) && !Objects.equals(apellido, null)){
+            binding.editNombre.setText(nombre);
+            binding.editApellido.setText(apellido);
+            binding.botonSimular.setEnabled(true);
+        }
 
         binding.editNombre.addTextChangedListener(new TextWatcher() {
             @Override
