@@ -29,6 +29,8 @@
         tools:layout="@layout/fragment_simular_plazo">
         <action
             android:id="@+id/action_simularPlazoFragment_to_constituirPlazoFragment"
-            app:destination="@id/constituirPlazoFragment" />
+            app:destination="@id/constituirPlazoFragment"
+            app:popUpTo="@id/constituirPlazoFragment"
+            app:popUpToInclusive="true"/>
     </fragment>
 </navigation>
