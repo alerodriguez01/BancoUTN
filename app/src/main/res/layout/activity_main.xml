@@ -12,6 +12,7 @@
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:title="titulo"
         android:id="@+id/toolbar"/>
 
     <!-- Contener de fragments que además sirve como navegador. -->

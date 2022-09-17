@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Se supone que Navigation le agrega el label del fragment al título de la Toolbar,
         // pero en el fragment de inicio no funciona, asi que agrego ese título manualmente
-        binding.toolbar.setTitle("Simular plazo");
+        //binding.toolbar.setTitle("Simular plazo");
 
 
 
